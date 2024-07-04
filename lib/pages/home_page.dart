@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
 import 'package:flutter_travel_v2_app/widgets/grid_tile_normal.dart';
+import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
+import 'package:flutter_travel_v2_app/widgets/secondary_text.dart';
 import 'package:gap/gap.dart';
 
 
@@ -83,9 +85,15 @@ class _MyHomePageState extends State<MyHomePage> {
               //slider
               DotSlider(index: index),
 
+              const Gap(25.0),
+
               //primary text
+              const PrimaryText(text: 'Easy way to book your hotel.'),
+
+              const Gap(10.0),
 
               //secondary text
+              const SecondaryText(text: 'Also book a flight ticket, places, food, and many more.'),
 
               //'Get started' button
             ],
