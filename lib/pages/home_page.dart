@@ -26,39 +26,49 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: StaggeredGrid.count(
-                crossAxisCount: 3,
+                crossAxisCount: 6,
                 mainAxisSpacing: 12,
                 crossAxisSpacing: 12,
                 children: const [
                   StaggeredGridTile.count(
-                    crossAxisCellCount: 1,
-                    mainAxisCellCount: 2,
+                      crossAxisCellCount: 2,
+                      mainAxisCellCount: 2,
+                      child: SizedBox.shrink(),
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 4,
                     child: GridTileNormal(source: 'assets/images/get-started-5.jpg',)
                   ),
                   StaggeredGridTile.count(
-                    crossAxisCellCount: 1,
-                    mainAxisCellCount: 2,
-                    child: GridTileNormal(source: 'assets/images/get-started-1.jpg',)
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 1,
+                    child: SizedBox.shrink(),
                   ),
                   StaggeredGridTile.count(
-                    crossAxisCellCount: 1,
-                    mainAxisCellCount: 2,
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 4,
                     child: GridTileNormal(source: 'assets/images/get-started-3.jpg',)
                   ),
                   StaggeredGridTile.count(
-                    crossAxisCellCount: 1,
-                    mainAxisCellCount: 1,
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 4,
+                    child: GridTileNormal(source: 'assets/images/get-started-1.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 4,
                     child: GridTileNormal(source: 'assets/images/get-started-4.jpg',)
                   ),
                   StaggeredGridTile.count(
-                    crossAxisCellCount: 1,
-                    mainAxisCellCount: 2,
-                    child: GridTileNormal(source: 'assets/images/get-started-2.jpg',)
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 4,
+                    child: GridTileNormal(source: 'assets/images/get-started-6.jpg',)
                   ),
                   StaggeredGridTile.count(
-                      crossAxisCellCount: 1,
-                      mainAxisCellCount: 2,
-                      child: GridTileNormal(source: 'assets/images/get-started-6.jpg',)
+                      crossAxisCellCount: 2,
+                      mainAxisCellCount: 3,
+                      child: GridTileNormal(source: 'assets/images/get-started-2.jpg',)
                   ),
                 ],
               ),
