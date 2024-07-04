@@ -7,7 +7,7 @@ class DataModel {
     const Hotel(
       name: 'Santorini',
       location: 'Greece',
-      assetSrc: '',
+      assetSrc: 'assets/images/hotel-1.jpg',
       price: 488,
       stars: 4.9,
       reviews: 6805,
@@ -21,7 +21,7 @@ class DataModel {
     const Hotel(
       name: 'Hotel Royal',
       location: 'Spain',
-      assetSrc: '',
+      assetSrc: 'assets/images/hotel-2.jpg',
       price: 280,
       stars: 4.8,
       reviews: 5770,
@@ -35,7 +35,7 @@ class DataModel {
     const Hotel(
       name: 'Anantara',
       location: 'Italy',
-      assetSrc: '',
+      assetSrc: 'assets/images/hotel-3.jpg',
       price: 800,
       stars: 4.7,
       reviews: 7208,
@@ -49,7 +49,7 @@ class DataModel {
     const Hotel(
       name: 'Holiday Inn Antalya',
       location: 'Turkey',
-      assetSrc: '',
+      assetSrc: 'assets/images/hotel-2.jpg',
       price: 250,
       stars: 4.5,
       reviews: 1321,
