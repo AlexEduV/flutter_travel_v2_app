@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
 import 'package:flutter_travel_v2_app/widgets/grid_tile_normal.dart';
 import 'package:gap/gap.dart';
 
@@ -12,6 +13,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  int index = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -73,9 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-              )
+              ),
+
+              const Gap(25.0),
 
               //slider
+              DotSlider(index: index),
 
               //primary text
 
