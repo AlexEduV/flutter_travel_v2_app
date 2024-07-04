@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/data_model.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
@@ -147,9 +146,22 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
 
               ),
-            )
+            ),
+
+            const Gap(30.0),
 
             //'Hot Deals' section title
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                children: [
+                  PrimaryText(
+                    text: 'Hot Deals',
+                    fontSize: 24,
+                  ),
+                ],
+              ),
+            ),
 
             //'hot deals' large item
 
