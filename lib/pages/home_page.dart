@@ -5,6 +5,7 @@ import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
 import 'package:flutter_travel_v2_app/widgets/grid_tile_normal.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/secondary_text.dart';
+import 'package:flutter_travel_v2_app/widgets/splash_button.dart';
 import 'package:gap/gap.dart';
 
 
@@ -99,23 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
               const Spacer(),
 
               //'Get started' button
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                margin: const EdgeInsets.symmetric(horizontal: 20.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  color: ProjectColors.mainColor,
-                ),
-                child: const Center(
-                  child: Text(
-                    'Get Started',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
+              SplashButton(
+                text: 'Get Started',
+                onTap: () {},
               ),
 
               const Gap(20.0),
