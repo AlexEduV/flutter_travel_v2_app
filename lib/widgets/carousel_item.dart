@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
+import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:gap/gap.dart';
 
 class CarouselItem extends StatelessWidget {
@@ -17,7 +18,7 @@ class CarouselItem extends StatelessWidget {
       children: [
 
         Container(
-          width: 180,
+          width: 200,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               image: DecorationImage(
@@ -114,6 +115,27 @@ class CarouselItem extends StatelessWidget {
                             fontSize: 16,
                           ),
                         ),
+
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+
+                        const Icon(
+                          Icons.star,
+                          color: ProjectColors.starColor,
+                        ),
+
+                        const Gap(4.0),
+
+                        Text(
+                          hotel.stars.toString(),
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        )
 
                       ],
                     )
