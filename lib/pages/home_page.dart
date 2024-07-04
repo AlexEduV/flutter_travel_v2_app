@@ -96,15 +96,29 @@ class _MyHomePageState extends State<MyHomePage> {
 
               const Gap(10.0),
 
+              const Spacer(),
+
               //'Get started' button
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                margin: const EdgeInsets.symmetric(horizontal: 20.0),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(20.0),
                   color: ProjectColors.mainColor,
                 ),
-                child: Text('Get Started'),
-              )
+                child: const Center(
+                  child: Text(
+                    'Get Started',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+
+              const Gap(20.0),
             ],
           ),
         )
