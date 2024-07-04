@@ -35,13 +35,13 @@ class CarouselItem extends StatelessWidget {
           right: 0,
           child: Container(
             padding: const EdgeInsets.only(left: 12, bottom: 15, right: 12),
-            decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
+            decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(20.0),
                     bottomLeft: Radius.circular(20.0)),
                 gradient: LinearGradient(
                   colors: [
-                    Colors.grey.withOpacity(0.2),
+                    Colors.transparent,
                     Colors.black,
                   ],
                   begin: Alignment.topCenter,
