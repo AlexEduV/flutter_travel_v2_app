@@ -88,7 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
               const Gap(25.0),
 
               //primary text
-              const PrimaryText(text: 'Easy way to book your hotel.'),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.0),
+                child: PrimaryText(text: 'Easy way to book your hotel.'),
+              ),
 
               const Gap(10.0),
 
