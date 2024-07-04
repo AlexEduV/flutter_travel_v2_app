@@ -9,7 +9,7 @@ class SplashButton extends StatelessWidget {
   const SplashButton({
     required this.text,
     required this.onTap,
-    this.borderRadius = 20.0,
+    this.borderRadius = 24.0,
     super.key,
   });
 
@@ -24,7 +24,7 @@ class SplashButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius),
           onTap: onTap,
           child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            padding: const EdgeInsets.symmetric(vertical: 18.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(borderRadius),
             ),

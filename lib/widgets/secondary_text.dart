@@ -6,7 +6,7 @@ class SecondaryText extends StatelessWidget {
 
   const SecondaryText({
     required this.text,
-    this.fontSize = 18,
+    this.fontSize = 17,
     super.key,
   });
 
