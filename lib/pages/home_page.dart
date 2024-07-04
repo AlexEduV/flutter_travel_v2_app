@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
 import 'package:flutter_travel_v2_app/widgets/grid_tile_normal.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/secondary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/splash_button.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -102,7 +102,9 @@ class _MyHomePageState extends State<MyHomePage> {
               //'Get started' button
               SplashButton(
                 text: 'Get Started',
-                onTap: () {},
+                onTap: () {
+                  context.go('/searchPage');
+                },
               ),
 
               const Gap(20.0),
