@@ -27,6 +27,13 @@ class SplashButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 18.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(borderRadius),
+              boxShadow: [
+                BoxShadow(
+                  offset: const Offset(2, 10.0),
+                  blurRadius: 10.0,
+                  color: ProjectColors.mainColor.withOpacity(0.3),
+                )
+              ]
             ),
             child: Center(
               child: Text(
@@ -35,6 +42,13 @@ class SplashButton extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
                   fontSize: 16,
+                  shadows: <Shadow>[
+                    Shadow(
+                      offset: Offset(0.2, 0.2),
+                      blurRadius: 1.0,
+                      color: Color.fromARGB(100, 0, 0, 0),
+                    ),
+                  ],
                 ),
               ),
             ),
