@@ -24,96 +24,97 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-        body: SafeArea(
-          child: Column(
-            children: [
+      backgroundColor: Colors.white,
+    body: SafeArea(
+        child: Column(
+          children: [
 
-              //grid view
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                child: StaggeredGrid.count(
-                  crossAxisCount: 6,
-                  mainAxisSpacing: 12,
-                  crossAxisSpacing: 12,
-                  children: const [
-                    StaggeredGridTile.count(
-                        crossAxisCellCount: 2,
-                        mainAxisCellCount: 2,
-                        child: SizedBox.shrink(),
-                    ),
-                    StaggeredGridTile.count(
+            //grid view
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              child: StaggeredGrid.count(
+                crossAxisCount: 6,
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                children: const [
+                  StaggeredGridTile.count(
                       crossAxisCellCount: 2,
-                      mainAxisCellCount: 3,
-                      child: GridTileNormal(source: 'assets/images/get-started-4.jpg',)
-                    ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 1,
+                      mainAxisCellCount: 2,
                       child: SizedBox.shrink(),
-                    ),
-                    StaggeredGridTile.count(
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 3,
+                    child: GridTileNormal(source: 'assets/images/get-started-4.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 1,
+                    child: SizedBox.shrink(),
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 3,
+                    child: GridTileNormal(source: 'assets/images/get-started-3.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 3,
+                    child: GridTileNormal(source: 'assets/images/get-started-1.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 3,
+                    child: GridTileNormal(source: 'assets/images/get-started-5.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 2,
+                    mainAxisCellCount: 3,
+                    child: GridTileNormal(source: 'assets/images/get-started-6.jpg',)
+                  ),
+                  StaggeredGridTile.count(
                       crossAxisCellCount: 2,
-                      mainAxisCellCount: 3,
-                      child: GridTileNormal(source: 'assets/images/get-started-3.jpg',)
-                    ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 3,
-                      child: GridTileNormal(source: 'assets/images/get-started-1.jpg',)
-                    ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 3,
-                      child: GridTileNormal(source: 'assets/images/get-started-5.jpg',)
-                    ),
-                    StaggeredGridTile.count(
-                      crossAxisCellCount: 2,
-                      mainAxisCellCount: 3,
-                      child: GridTileNormal(source: 'assets/images/get-started-6.jpg',)
-                    ),
-                    StaggeredGridTile.count(
-                        crossAxisCellCount: 2,
-                        mainAxisCellCount: 2,
-                        child: GridTileNormal(source: 'assets/images/get-started-2.jpg',)
-                    ),
-                  ],
-                ),
+                      mainAxisCellCount: 2,
+                      child: GridTileNormal(source: 'assets/images/get-started-2.jpg',)
+                  ),
+                ],
               ),
+            ),
 
-              const Gap(15.0),
+            const Gap(15.0),
 
-              //slider
-              DotSlider(index: index),
+            //slider
+            DotSlider(index: index),
 
-              const Gap(25.0),
+            const Gap(25.0),
 
-              //primary text
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0),
-                child: PrimaryText(text: 'Easy way to book your hotel.'),
-              ),
+            //primary text
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40.0),
+              child: PrimaryText(text: 'Easy way to book your hotel.'),
+            ),
 
-              const Gap(10.0),
+            const Gap(10.0),
 
-              //secondary text
-              const SecondaryText(text: 'Also book a flight ticket, places, food, and many more.'),
+            //secondary text
+            const SecondaryText(text: 'Also book a flight ticket, places, food, and many more.'),
 
-              const Gap(10.0),
+            const Gap(10.0),
 
-              const Spacer(),
+            const Spacer(),
 
-              //'Get started' button
-              SplashButton(
-                text: 'Get Started',
-                onTap: () {
-                  context.go('/searchPage');
-                },
-              ),
+            //'Get started' button
+            SplashButton(
+              text: 'Get Started',
+              onTap: () {
+                context.go('/searchPage');
+              },
+            ),
 
-              const Gap(20.0),
-            ],
-          ),
-        )
+            const Gap(20.0),
+          ],
+        ),
+      ),
     );
   }
 }
