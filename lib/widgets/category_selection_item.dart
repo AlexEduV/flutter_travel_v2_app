@@ -22,8 +22,14 @@ class CategorySelectionItem extends StatelessWidget {
 
     const double borderRadius = 20.0;
 
+    const Color activeTint = Colors.white;
+    const Color inactiveTint = Colors.black54;
+
+    const Color activeBackground = ProjectColors.mainColor;
+    const Color inactiveBackground = Colors.white;
+
     return Material(
-      color: isSelected ? ProjectColors.mainColor : Colors.white,
+      color: isSelected ? activeBackground : inactiveBackground,
       borderRadius: BorderRadius.circular(borderRadius),
       child: InkWell(
         onTap: onTap,
@@ -49,7 +55,7 @@ class CategorySelectionItem extends StatelessWidget {
 
               Icon(
                 icon,
-                color: isSelected ? Colors.white : Colors.grey,
+                color: isSelected ? activeTint : inactiveTint,
               ),
 
               const Gap(10.0),
@@ -57,7 +63,7 @@ class CategorySelectionItem extends StatelessWidget {
               Text(
                 text,
                 style: TextStyle(
-                  color: isSelected ? Colors.white : Colors.grey,
+                  color: isSelected ? activeTint : inactiveTint,
                 ),
 
               )

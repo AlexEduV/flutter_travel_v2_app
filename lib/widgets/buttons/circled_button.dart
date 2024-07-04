@@ -36,7 +36,7 @@ class CircledButton extends StatelessWidget {
           ),
           child: Icon(
             icon,
-            color: Colors.black38,
+            color: Colors.black87,
           ),
         ),
       ),
