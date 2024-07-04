@@ -20,12 +20,13 @@ class _DiscoverPageState extends State<DiscoverPage> {
     'Food' : Icons.set_meal,
   };
 
-  final int selectedSectionIndex = 0;
+  late int selectedSectionIndex = 0;
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -65,7 +66,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
 
             //selection
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.only(left: 20.0),
               child: SizedBox(
                 height: 120,
                 child: ListView.separated(
@@ -73,42 +74,59 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   itemCount: 4,
                   itemBuilder: (context, index) {
 
-                    return Container(
-                      padding: const EdgeInsets.all(20.0),
-                      decoration: BoxDecoration(
+                    return Material(
+                      color: index == selectedSectionIndex ? ProjectColors.mainColor : Colors.white,
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            selectedSectionIndex = index;
+                          });
+                        },
                         borderRadius: BorderRadius.circular(20.0),
-                        border: Border.all(
-                          color: index == selectedSectionIndex ? ProjectColors.mainColor : Colors.grey.withOpacity(0.5),
-                        ),
-                        color: index == selectedSectionIndex ? ProjectColors.mainColor : Colors.white
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-
-                          Icon(
-                            sections.values.elementAt(index),
-                            color: index == selectedSectionIndex ? Colors.white : Colors.grey,
-                          ),
-
-                          const Gap(10.0),
-
-                          Text(
-                            sections.keys.elementAt(index),
-                            style: TextStyle(
-                              color: index == selectedSectionIndex ? Colors.white : Colors.grey,
+                        child: Container(
+                          padding: const EdgeInsets.all(20.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.0),
+                            border: Border.all(
+                              color: index == selectedSectionIndex ? ProjectColors.mainColor : Colors.grey.withOpacity(0.2),
                             ),
+                            boxShadow: index == selectedSectionIndex ? [
+                              BoxShadow(
+                                offset: const Offset(2, 10.0),
+                                blurRadius: 10.0,
+                                color: ProjectColors.mainColor.withOpacity(0.3),
+                              )
+                            ] : [],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
 
-                          )
+                              Icon(
+                                sections.values.elementAt(index),
+                                color: index == selectedSectionIndex ? Colors.white : Colors.grey,
+                              ),
 
-                        ],
+                              const Gap(10.0),
+
+                              Text(
+                                sections.keys.elementAt(index),
+                                style: TextStyle(
+                                  color: index == selectedSectionIndex ? Colors.white : Colors.grey,
+                                ),
+
+                              )
+
+                            ],
+                          ),
+                        ),
                       ),
                     );
                   },
                   separatorBuilder: (context, index) {
 
-                    return const Gap(10.0);
-
+                    return const Gap(20.0);
                   },
                 ),
               ),
