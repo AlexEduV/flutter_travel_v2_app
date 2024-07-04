@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_travel_v2_app/pages/home_page.dart';
-import 'package:flutter_travel_v2_app/pages/search_page.dart';
+import 'package:flutter_travel_v2_app/pages/discover_page.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
@@ -16,7 +16,7 @@ final GoRouter _router = GoRouter(
       path: '/',
       name: 'root',
       builder: (BuildContext context, GoRouterState state) {
-        return const MyHomePage();
+        return const HomePage();
       },
       routes: <RouteBase>[
         GoRoute(
@@ -24,7 +24,7 @@ final GoRouter _router = GoRouter(
           name: 'searchPage',
           builder: (BuildContext context, GoRouterState state) {
 
-            return const SearchPage();
+            return const DiscoverPage();
           },
         ),
       ],

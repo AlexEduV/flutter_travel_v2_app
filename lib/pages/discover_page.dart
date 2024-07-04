@@ -4,14 +4,14 @@ import 'package:flutter_travel_v2_app/widgets/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
 
-class SearchPage extends StatefulWidget {
-  const SearchPage({super.key});
+class DiscoverPage extends StatefulWidget {
+  const DiscoverPage({super.key});
 
   @override
-  State<SearchPage> createState() => _SearchPageState();
+  State<DiscoverPage> createState() => _DiscoverPageState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class _DiscoverPageState extends State<DiscoverPage> {
 
   final Map<String, IconData> sections = {
     'Hotel' : Icons.hotel,
