@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
@@ -72,7 +74,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: 4,
-                  itemBuilder: (context, index) {
+                  itemBuilder: (_, index) {
 
                     return CategorySelectionItem(
                       isSelected: index == selectedSectionIndex,
@@ -86,7 +88,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     );
 
                   },
-                  separatorBuilder: (context, index) {
+                  separatorBuilder: (_, index) {
 
                     return const Gap(20.0);
                   },
@@ -97,8 +99,52 @@ class _DiscoverPageState extends State<DiscoverPage> {
             const Gap(30.0),
 
             //'Popular' section title with 'See All' button
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+
+                  PrimaryText(
+                    text: 'Popular Hotels',
+                    fontSize: 24,
+                  ),
+
+                  Text(
+                    'See all',
+                    style: TextStyle(
+                      color: ProjectColors.accentColor,
+                      fontSize: 16,
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
+
+            const Gap(15.0),
 
             //'popular' horizontal list view
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: SizedBox(
+                height: 300,
+                child: ListView.separated(
+                  itemCount: 4,
+                  itemBuilder: (_, index) {
+
+                    return Container(
+
+                    );
+                  },
+                  separatorBuilder: (_, index) {
+
+                    return const Gap(15.0);
+                  },
+                ),
+
+              ),
+            )
 
             //'Hot Deals' section title
 
