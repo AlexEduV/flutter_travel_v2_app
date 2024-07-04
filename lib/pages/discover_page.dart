@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
@@ -17,7 +16,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
   final Map<String, IconData> sections = {
     'Hotel' : Icons.hotel,
     'Flight' : Icons.flight,
-    'Place' : Icons.location_on_outlined,
+    'Place' : Icons.location_on,
     'Food' : Icons.set_meal,
   };
 
@@ -63,9 +62,9 @@ class _DiscoverPageState extends State<DiscoverPage> {
               ),
             ),
 
-            const Gap(25.0),
+            const Gap(30.0),
 
-            //selection
+            //category selection
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: SizedBox(
@@ -93,11 +92,17 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   },
                 ),
               ),
-            )
+            ),
+
+            const Gap(30.0),
+
+            //'Popular' section title with 'See All' button
 
             //'popular' horizontal list view
 
-            //hot deals
+            //'Hot Deals' section title
+
+            //'hot deals' large item
 
           ],
         ),
