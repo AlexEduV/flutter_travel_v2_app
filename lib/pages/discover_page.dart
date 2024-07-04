@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
-import 'package:flutter_travel_v2_app/widgets/circled_button.dart';
+import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
+import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
 
@@ -68,61 +69,23 @@ class _DiscoverPageState extends State<DiscoverPage> {
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: SizedBox(
-                height: 120,
+                height: 100,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: 4,
                   itemBuilder: (context, index) {
 
-                    return Material(
-                      color: index == selectedSectionIndex ? ProjectColors.mainColor : Colors.white,
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            selectedSectionIndex = index;
-                          });
-                        },
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Container(
-                          padding: const EdgeInsets.all(20.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            border: Border.all(
-                              color: index == selectedSectionIndex ? ProjectColors.mainColor : Colors.grey.withOpacity(0.2),
-                            ),
-                            boxShadow: index == selectedSectionIndex ? [
-                              BoxShadow(
-                                offset: const Offset(2, 10.0),
-                                blurRadius: 10.0,
-                                color: ProjectColors.mainColor.withOpacity(0.3),
-                              )
-                            ] : [],
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-
-                              Icon(
-                                sections.values.elementAt(index),
-                                color: index == selectedSectionIndex ? Colors.white : Colors.grey,
-                              ),
-
-                              const Gap(10.0),
-
-                              Text(
-                                sections.keys.elementAt(index),
-                                style: TextStyle(
-                                  color: index == selectedSectionIndex ? Colors.white : Colors.grey,
-                                ),
-
-                              )
-
-                            ],
-                          ),
-                        ),
-                      ),
+                    return CategorySelectionItem(
+                      isSelected: index == selectedSectionIndex,
+                      onTap: () {
+                        setState(() {
+                          selectedSectionIndex = index;
+                        });
+                      },
+                      text: sections.keys.elementAt(index),
+                      icon: sections.values.elementAt(index),
                     );
+
                   },
                   separatorBuilder: (context, index) {
 

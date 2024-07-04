@@ -4,7 +4,7 @@ import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
 import 'package:flutter_travel_v2_app/widgets/grid_tile_normal.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/secondary_text.dart';
-import 'package:flutter_travel_v2_app/widgets/splash_button.dart';
+import 'package:flutter_travel_v2_app/widgets/buttons/splash_button.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
