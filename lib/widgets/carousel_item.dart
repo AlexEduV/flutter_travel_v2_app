@@ -34,12 +34,14 @@ class CarouselItem extends StatelessWidget {
           left: 0,
           right: 0,
           child: Container(
-            padding: const EdgeInsets.only(left: 10, bottom: 10, right: 10),
+            padding: const EdgeInsets.only(left: 12, bottom: 15, right: 12),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                gradient: const LinearGradient(
+                borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(20.0),
+                    bottomLeft: Radius.circular(20.0)),
+                gradient: LinearGradient(
                   colors: [
-                    Colors.transparent,
+                    Colors.grey.withOpacity(0.2),
                     Colors.black,
                   ],
                   begin: Alignment.topCenter,
@@ -56,7 +58,7 @@ class CarouselItem extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
 
@@ -87,8 +89,37 @@ class CarouselItem extends StatelessWidget {
                   ],
                 ),
 
-                //price and stars
+                const Gap(3.0),
 
+                //price and stars
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+
+                    Row(
+                      children: [
+                        Text(
+                          '\$${hotel.price}/',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+
+                        const Text(
+                          'night',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+
+                      ],
+                    )
+
+                  ],
+                )
 
               ],
             ),

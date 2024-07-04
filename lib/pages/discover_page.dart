@@ -142,7 +142,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   },
                   separatorBuilder: (_, index) {
 
-                    return const Gap(15.0);
+                    return const Gap(18.0);
                   },
                 ),
 
