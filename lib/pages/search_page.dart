@@ -28,34 +28,28 @@ class _SearchPageState extends State<SearchPage> {
 
                   //text
                   const Expanded(
-                    child: PrimaryText(
-                      text: 'Where you want to go?',
-                      fontSize: 30,
-                      textAlign: TextAlign.start,
-                      height: 1.0,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 40.0),
+                      child: PrimaryText(
+                        text: 'Where you want to go?',
+                        fontSize: 32,
+                        textAlign: TextAlign.start,
+                        height: 1.0,
+                      ),
                     ),
                   ),
 
                   //search icon
-                  Expanded(
-                    child: Row(
-                      children: [
-
-                        const Spacer(),
-
-                        CircledButton(
-                          onTap: () {},
-                          icon: Icons.search,
-                        ),
-
-
-                      ],
-                    ),
+                  CircledButton(
+                    onTap: () {},
+                    icon: Icons.search,
                   )
 
                 ],
               ),
-            )
+            ),
+
+            
 
           ],
         ),
