@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_travel_v2_app/widgets/grid_tile_normal.dart';
 import 'package:gap/gap.dart';
 
 
@@ -22,37 +23,45 @@ class _MyHomePageState extends State<MyHomePage> {
             const Gap(50.0),
 
             //grid view
-            StaggeredGrid.count(
-              crossAxisCount: 4,
-              mainAxisSpacing: 4,
-              crossAxisSpacing: 4,
-              children: const [
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 2,
-                  child: Text('1'),
-                ),
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 2,
-                  mainAxisCellCount: 1,
-                  child: Text('2'),
-                ),
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 1,
-                  mainAxisCellCount: 1,
-                  child: Text('3'),
-                ),
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 1,
-                  mainAxisCellCount: 1,
-                  child: Text('4'),
-                ),
-                StaggeredGridTile.count(
-                  crossAxisCellCount: 4,
-                  mainAxisCellCount: 2,
-                  child: Text('5'),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: StaggeredGrid.count(
+                crossAxisCount: 3,
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                children: const [
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 1,
+                    mainAxisCellCount: 2,
+                    child: GridTileNormal(source: 'assets/images/get-started-5.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 1,
+                    mainAxisCellCount: 2,
+                    child: GridTileNormal(source: 'assets/images/get-started-1.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 1,
+                    mainAxisCellCount: 2,
+                    child: GridTileNormal(source: 'assets/images/get-started-3.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 1,
+                    mainAxisCellCount: 1,
+                    child: GridTileNormal(source: 'assets/images/get-started-4.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                    crossAxisCellCount: 1,
+                    mainAxisCellCount: 2,
+                    child: GridTileNormal(source: 'assets/images/get-started-2.jpg',)
+                  ),
+                  StaggeredGridTile.count(
+                      crossAxisCellCount: 1,
+                      mainAxisCellCount: 2,
+                      child: GridTileNormal(source: 'assets/images/get-started-6.jpg',)
+                  ),
+                ],
+              ),
             )
 
             //slider
