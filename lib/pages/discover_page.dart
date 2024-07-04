@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_v2_app/model/data_model.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
+import 'package:flutter_travel_v2_app/widgets/carousel_item.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
@@ -126,16 +128,17 @@ class _DiscoverPageState extends State<DiscoverPage> {
 
             //'popular' horizontal list view
             Padding(
-              padding: const EdgeInsets.only(left: 20.0),
+              padding: const EdgeInsets.only(left: 25.0),
               child: SizedBox(
                 height: 300,
                 child: ListView.separated(
-                  itemCount: 4,
+                  padding: const EdgeInsets.only(right: 15.0),
+                  itemCount: 3,
+                  scrollDirection: Axis.horizontal,
                   itemBuilder: (_, index) {
 
-                    return Container(
+                    return CarouselItem(hotel: DataModel.hotels[index]);
 
-                    );
                   },
                   separatorBuilder: (_, index) {
 
