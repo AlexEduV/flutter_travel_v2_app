@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
-import 'package:flutter_travel_v2_app/widgets/location_row.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:gap/gap.dart';
 
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
@@ -63,25 +64,9 @@ class InfoColumn extends StatelessWidget {
               ],
             ),
 
-            Row(
-              children: [
-
-                const Icon(
-                  Icons.star,
-                  color: ProjectColors.starColor,
-                ),
-
-                const Gap(4.0),
-
-                Text(
-                  hotel.stars.toString(),
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Colors.white,
-                  ),
-                )
-
-              ],
+            //stars
+            StarsRow(
+              stars: hotel.stars.toString(),
             )
 
           ],

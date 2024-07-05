@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
-import 'package:flutter_travel_v2_app/widgets/location_row.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
@@ -121,6 +121,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     const Gap(20.0),
 
+                    //hotel name
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: PrimaryText(
@@ -130,6 +131,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     const Gap(5.0),
 
+                    //location
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: LocationRow(
@@ -137,6 +139,10 @@ class _DetailsPageState extends State<DetailsPage> {
                         color: Colors.black87,
                       ),
                     ),
+
+                    const Gap(15.0),
+
+                    //stars and price row
 
                   ],
                 ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class LocationRow extends StatelessWidget {
   final String locationName;
@@ -17,7 +16,9 @@ class LocationRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+
+    return Wrap(
+      spacing: 5.0,
       children: [
 
         //location icon
@@ -26,8 +27,6 @@ class LocationRow extends StatelessWidget {
           color: color,
           size: iconSize,
         ),
-
-        const Gap(5.0),
 
         //location text
         Text(
