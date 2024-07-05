@@ -4,11 +4,13 @@ class CircledButton extends StatelessWidget {
   final Function() onTap;
   final IconData icon;
   final double padding;
+  final Color color;
 
   const CircledButton({
     required this.onTap,
     required this.icon,
     this.padding = 12.0,
+    this.color = Colors.black87,
     super.key,
   });
 
@@ -18,7 +20,7 @@ class CircledButton extends StatelessWidget {
     const double borderRadius = 24.0;
 
     return Material(
-      color: Colors.white,
+      elevation: 1.0,
       borderRadius: BorderRadius.circular(borderRadius),
       child: InkWell(
         borderRadius: BorderRadius.circular(borderRadius),
@@ -38,7 +40,7 @@ class CircledButton extends StatelessWidget {
           ),
           child: Icon(
             icon,
-            color: Colors.black87,
+            color: color,
           ),
         ),
       ),

@@ -52,6 +52,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     context.goNamed('discover');
                   },
                   icon: Icons.arrow_back,
+                  color: Colors.black54,
                   padding: 10.0,
                 ),
 
@@ -61,14 +62,20 @@ class _DetailsPageState extends State<DetailsPage> {
                     CircledButton(
                       onTap: () {},
                       icon: Icons.share_outlined,
+                      color: Colors.black54,
                       padding: 10.0,
                     ),
 
                     const Gap(15.0),
 
                     CircledButton(
-                      onTap: () {},
-                      icon: Icons.favorite_border_rounded,
+                      onTap: () {
+                        setState(() {
+                          widget.hotel.isFavorite = !widget.hotel.isFavorite;
+                        });
+                      },
+                      icon: widget.hotel.isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+                      color: Colors.black54,
                       padding: 10.0,
                     ),
 
@@ -78,7 +85,32 @@ class _DetailsPageState extends State<DetailsPage> {
 
               ],
             ),
-          )
+          ),
+
+          //number of photos
+          Positioned(
+            bottom: 15.0,
+            left: 10.0,
+            right: 10.0,
+            child: Center(
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 7.0, horizontal: 12.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16.0),
+                  color: Colors.black38,
+                ),
+                child: const Text(
+                  '124 photos',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          
 
         ],
       ),
