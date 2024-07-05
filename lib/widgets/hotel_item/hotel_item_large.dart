@@ -3,10 +3,10 @@ import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:gap/gap.dart';
 
-class HotelItem extends StatelessWidget {
+class HotelItemLarge extends StatelessWidget {
   final Hotel hotel;
 
-  const HotelItem({
+  const HotelItemLarge({
     required this.hotel,
     super.key,
   });
@@ -20,7 +20,6 @@ class HotelItem extends StatelessWidget {
       children: [
 
         Container(
-          width: 200,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(borderRadius),
               image: DecorationImage(
@@ -56,49 +55,79 @@ class HotelItem extends StatelessWidget {
               children: [
 
                 //name
-                Text(
-                  hotel.name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+
+                    //name
+                    Text(
+                      hotel.name,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+
+                    //stars
+                    Row(
+                      children: [
+
+                        const Icon(
+                          Icons.star,
+                          color: ProjectColors.starColor,
+                        ),
+
+                        const Gap(4.0),
+
+                        Text(
+                          hotel.stars.toString(),
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        )
+
+                      ],
+                    ),
+
+                  ],
                 ),
 
                 const Gap(3.0),
 
                 //location
                 Row(
-                  children: [
-
-                    //location icon
-                    const Icon(
-                      Icons.location_on_outlined,
-                      color: Colors.white,
-                      size: 22,
-                    ),
-
-                    const Gap(5.0),
-
-                    //location text
-                    Text(
-                      hotel.location,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                  ],
-                ),
-
-                const Gap(3.0),
-
-                //price and stars
-                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
 
+                    Row(
+                      children: [
+
+                        //location icon
+                        const Icon(
+                          Icons.location_on_outlined,
+                          color: Colors.white,
+                          size: 22,
+                        ),
+
+                        const Gap(5.0),
+
+                        //location text
+                        Text(
+                          hotel.location,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    const Gap(3.0),
+
+                    //price and stars
                     Row(
                       children: [
                         Text(
@@ -121,26 +150,7 @@ class HotelItem extends StatelessWidget {
                       ],
                     ),
 
-                    Row(
-                      children: [
 
-                        const Icon(
-                          Icons.star,
-                          color: ProjectColors.starColor,
-                        ),
-
-                        const Gap(4.0),
-
-                        Text(
-                          hotel.stars.toString(),
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                          ),
-                        )
-
-                      ],
-                    )
 
                   ],
                 )
@@ -149,6 +159,26 @@ class HotelItem extends StatelessWidget {
             ),
           ),
         ),
+
+        //deal banner
+        Positioned(
+          left: 15,
+          top: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              color: ProjectColors.dealsBannerColor,
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8.0),
+            child: Text(
+              hotel.saleBannerText ?? 'Sale Here',
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+        )
 
       ],
     );

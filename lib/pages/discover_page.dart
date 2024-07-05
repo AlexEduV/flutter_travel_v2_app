@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/data_model.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
-import 'package:flutter_travel_v2_app/widgets/hotel_item.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
-import 'package:flutter_travel_v2_app/widgets/hotel_item_large.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item_large.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
 
@@ -169,7 +169,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
 
               //'hot deals' large item
               SizedBox(
-                height: 300,
+                height: 270,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: HotelItemLarge(
