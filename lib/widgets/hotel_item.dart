@@ -3,10 +3,10 @@ import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:gap/gap.dart';
 
-class CarouselItem extends StatelessWidget {
+class HotelItem extends StatelessWidget {
   final Hotel hotel;
 
-  const CarouselItem({
+  const HotelItem({
     required this.hotel,
     super.key,
   });
@@ -14,13 +14,15 @@ class CarouselItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    const double borderRadius = 20.0;
+
     return Stack(
       children: [
 
         Container(
           width: 200,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(borderRadius),
               image: DecorationImage(
                 image: AssetImage(
                     hotel.assetSrc,
@@ -35,15 +37,15 @@ class CarouselItem extends StatelessWidget {
           left: 0,
           right: 0,
           child: Container(
-            padding: const EdgeInsets.only(left: 12, bottom: 15, right: 12),
+            padding: const EdgeInsets.only(left: 15, bottom: 15, right: 15),
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(20.0),
-                    bottomLeft: Radius.circular(20.0)),
+                    bottomRight: Radius.circular(borderRadius),
+                    bottomLeft: Radius.circular(borderRadius)),
                 gradient: LinearGradient(
                   colors: [
                     Colors.transparent,
-                    Colors.black,
+                    Colors.black87,
                   ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,

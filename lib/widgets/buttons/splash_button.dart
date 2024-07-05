@@ -15,6 +15,7 @@ class SplashButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Material(
@@ -23,6 +24,7 @@ class SplashButton extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(borderRadius),
           onTap: onTap,
+
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 18.0),
             decoration: BoxDecoration(

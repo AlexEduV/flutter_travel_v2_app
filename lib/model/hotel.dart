@@ -16,6 +16,8 @@ class Hotel {
   final int ownerReviews;
   final String ownerAssetSrc;
 
+  final String? saleBannerText;
+
   const Hotel({
     required this.name,
     required this.location,
@@ -28,6 +30,7 @@ class Hotel {
     required this.ownerStars,
     required this.ownerReviews,
     required this.ownerAssetSrc,
+    this.saleBannerText,
   });
 
 }

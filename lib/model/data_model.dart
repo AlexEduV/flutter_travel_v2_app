@@ -49,7 +49,7 @@ class DataModel {
     const Hotel(
       name: 'Holiday Inn Antalya',
       location: 'Turkey',
-      assetSrc: 'assets/images/hotel-2.jpg',
+      assetSrc: 'assets/images/hotel-4.jpg',
       price: 250,
       stars: 4.5,
       reviews: 1321,
@@ -58,6 +58,7 @@ class DataModel {
       ownerStars: 4.5,
       ownerReviews: 576,
       ownerAssetSrc: '',
+      saleBannerText: '25% OFF',
     ),
 
 
