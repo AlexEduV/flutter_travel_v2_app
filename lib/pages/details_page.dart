@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
+import 'package:flutter_travel_v2_app/widgets/location_row.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
@@ -107,7 +108,7 @@ class _DetailsPageState extends State<DetailsPage> {
               right: 0,
               bottom: 0,
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(24.0),
                     topRight: Radius.circular(24.0),
@@ -115,9 +116,27 @@ class _DetailsPageState extends State<DetailsPage> {
                   color: Colors.white,
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                   PrimaryText(text: widget.hotel.name),
+                    const Gap(20.0),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: PrimaryText(
+                        text: widget.hotel.name,
+                      ),
+                    ),
+
+                    const Gap(5.0),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: LocationRow(
+                        locationName: widget.hotel.location,
+                        color: Colors.black87,
+                      ),
+                    ),
 
                   ],
                 ),
