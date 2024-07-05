@@ -34,7 +34,7 @@ class LocationRow extends StatelessWidget {
           style: TextStyle(
             color: color,
             fontSize: fontSize,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w400,
           ),
         ),
       ],

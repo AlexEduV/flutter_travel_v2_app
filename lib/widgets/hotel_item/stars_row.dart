@@ -5,11 +5,16 @@ class StarsRow extends StatelessWidget {
   final String stars;
   final double iconSize;
   final double fontSize;
+  final Color? textColor;
+
+  final String? reviews;
 
   const StarsRow({
     required this.stars,
     this.iconSize = 20,
     this.fontSize = 12,
+    this.textColor = Colors.white,
+    this.reviews,
     super.key,
   });
 
@@ -31,7 +36,18 @@ class StarsRow extends StatelessWidget {
           stars,
           style: TextStyle(
             fontSize: fontSize,
-            color: Colors.white,
+            color: textColor,
+          ),
+        ),
+
+        Visibility(
+          visible: reviews != null,
+          child: Text(
+            '($reviews Reviews)',
+            style: TextStyle(
+              fontSize: fontSize,
+              color: Colors.black54,
+            ),
           ),
         ),
 

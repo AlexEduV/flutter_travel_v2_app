@@ -3,9 +3,11 @@ import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 
 class DetailsPage extends StatefulWidget {
   final Hotel hotel;
@@ -140,9 +142,25 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
-                    const Gap(15.0),
+                    const Gap(5.0),
 
                     //stars and price row
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Row(
+                        children: [
+
+                          //stars & reviews
+                          StarsRow(
+                            stars: widget.hotel.stars.toString(),
+                            fontSize: 16,
+                            iconSize: 24,
+                            textColor: null,
+                            reviews: NumberFormat.compact().format(widget.hotel.reviews),
+                          ),
+                        ],
+                      ),
+                    ),
 
                   ],
                 ),
