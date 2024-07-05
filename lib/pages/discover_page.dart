@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/data_model.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
+import 'package:flutter_travel_v2_app/widgets/buttons/custom_text_button.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
@@ -102,23 +103,20 @@ class _DiscoverPageState extends State<DiscoverPage> {
               const Gap(30.0),
 
               //'Popular' section title with 'See All' button
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
 
-                    PrimaryText(
+                    const PrimaryText(
                       text: 'Popular Hotels',
                       fontSize: 24,
                     ),
 
-                    Text(
-                      'See all',
-                      style: TextStyle(
-                        color: ProjectColors.accentColor,
-                        fontSize: 16,
-                      ),
+                    CustomTextButton(
+                      text: 'See All',
+                      onTap: () {},
                     ),
 
                   ],

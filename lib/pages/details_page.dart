@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
+import 'package:flutter_travel_v2_app/widgets/buttons/custom_text_button.dart';
 import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
@@ -23,6 +24,9 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPageState extends State<DetailsPage> {
+
+  late bool isDescriptionExpanded = false;
+
   @override
   Widget build(BuildContext context) {
 
@@ -178,8 +182,28 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
 
                     //description
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Text(
+                        widget.hotel.description,
+                        maxLines: !isDescriptionExpanded ? 3 : 10,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
 
                     //'read more' button
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: CustomTextButton(
+                        text: !isDescriptionExpanded ? 'Read More' : 'Read Less',
+                        fontSize: null,
+                        onTap: () {
+                          setState(() {
+                            isDescriptionExpanded = !isDescriptionExpanded;
+                          });
+                        },
+                      ),
+                    ),
 
                     //'What we offer' section title
 
