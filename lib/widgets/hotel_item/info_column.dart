@@ -23,7 +23,7 @@ class InfoColumn extends StatelessWidget {
           hotel.name,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -38,7 +38,7 @@ class InfoColumn extends StatelessWidget {
             const Icon(
               Icons.location_on_outlined,
               color: Colors.white,
-              size: 22,
+              size: 20,
             ),
 
             const Gap(5.0),
@@ -48,7 +48,7 @@ class InfoColumn extends StatelessWidget {
               hotel.location,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: FontWeight.w300,
               ),
             ),
@@ -69,7 +69,7 @@ class InfoColumn extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
-                    fontSize: 16,
+                    fontSize: 14,
                   ),
                 ),
 
@@ -77,7 +77,7 @@ class InfoColumn extends StatelessWidget {
                   'night',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 12,
                   ),
                 ),
 
@@ -97,7 +97,7 @@ class InfoColumn extends StatelessWidget {
                 Text(
                   hotel.stars.toString(),
                   style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     color: Colors.white,
                   ),
                 )

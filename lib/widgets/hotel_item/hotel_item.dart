@@ -26,7 +26,7 @@ class HotelItem extends StatelessWidget {
 
         //cover picture
         Container(
-          width: !isLarge ? 200 : null,
+          width: !isLarge ? 190 : null,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(borderRadius),
               image: DecorationImage(
