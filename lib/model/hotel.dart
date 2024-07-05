@@ -18,7 +18,9 @@ class Hotel {
 
   final String? saleBannerText;
 
-  const Hotel({
+  late bool isFavorite;
+
+  Hotel({
     required this.name,
     required this.location,
     required this.assetSrc,
@@ -31,6 +33,7 @@ class Hotel {
     required this.ownerReviews,
     required this.ownerAssetSrc,
     this.saleBannerText,
+    this.isFavorite = false,
   });
 
 }

@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class CircledButton extends StatelessWidget {
-  final double borderRadius;
   final Function() onTap;
   final IconData icon;
+  final double padding;
 
   const CircledButton({
     required this.onTap,
     required this.icon,
-    this.borderRadius = 24.0,
+    this.padding = 12.0,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+
+    const double borderRadius = 24.0;
 
     return Material(
       color: Colors.white,
@@ -22,7 +24,7 @@ class CircledButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(borderRadius),
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(padding),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(borderRadius),

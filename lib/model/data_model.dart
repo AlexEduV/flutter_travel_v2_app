@@ -4,7 +4,7 @@ class DataModel {
 
   static List<Hotel> hotels = [
 
-    const Hotel(
+    Hotel(
       name: 'Santorini',
       location: 'Greece',
       assetSrc: 'assets/images/hotel-1.jpg',
@@ -18,7 +18,7 @@ class DataModel {
       ownerAssetSrc: '',
     ),
 
-    const Hotel(
+    Hotel(
       name: 'Hotel Royal',
       location: 'Spain',
       assetSrc: 'assets/images/hotel-2.jpg',
@@ -32,7 +32,7 @@ class DataModel {
       ownerAssetSrc: '',
     ),
 
-    const Hotel(
+    Hotel(
       name: 'Anantara',
       location: 'Italy',
       assetSrc: 'assets/images/hotel-3.jpg',
@@ -46,7 +46,7 @@ class DataModel {
       ownerAssetSrc: '',
     ),
 
-    const Hotel(
+    Hotel(
       name: 'Holiday Inn Antalya',
       location: 'Turkey',
       assetSrc: 'assets/images/hotel-4.jpg',
