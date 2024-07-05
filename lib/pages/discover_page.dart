@@ -6,6 +6,7 @@ import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class DiscoverPage extends StatefulWidget {
   const DiscoverPage({super.key});
@@ -137,7 +138,12 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (_, index) {
 
-                      return HotelItem(hotel: DataModel.hotels[index]);
+                      return HotelItem(
+                        hotel: DataModel.hotels[index],
+                        onTap: () {
+                          context.goNamed('details', extra: DataModel.hotels[index]);
+                        },
+                      );
 
                     },
                     separatorBuilder: (_, index) {
@@ -174,6 +180,9 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   child: HotelItem(
                     hotel: DataModel.hotels.last,
                     isLarge: true,
+                    onTap: () {
+                      context.goNamed('details', extra: DataModel.hotels.last);
+                    },
                   ),
                 ),
               ),

@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
             SplashButton(
               text: 'Get Started',
               onTap: () {
-                context.go('/discover');
+                context.goNamed('discover');
               },
             ),
 

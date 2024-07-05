@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
-import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/info_column.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/info_column_wide.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/sale_banner.dart';
-import 'package:gap/gap.dart';
 
 class HotelItem extends StatelessWidget {
   final Hotel hotel;
   final bool isLarge;
+  final Function() onTap;
 
   const HotelItem({
     required this.hotel,
+    required this.onTap,
     this.isLarge = false,
     super.key,
   });
@@ -25,16 +25,23 @@ class HotelItem extends StatelessWidget {
       children: [
 
         //cover picture
-        Container(
-          width: !isLarge ? 190 : null,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(borderRadius),
-              image: DecorationImage(
-                image: AssetImage(
-                    hotel.assetSrc,
-                ),
-                fit: BoxFit.cover,
-              )
+        Material(
+          borderRadius: BorderRadius.circular(borderRadius),
+          child: InkWell(
+            onTap: onTap,
+            borderRadius: BorderRadius.circular(20.0),
+            child: Container(
+              width: !isLarge ? 190 : null,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(borderRadius),
+                  image: DecorationImage(
+                    image: AssetImage(
+                        hotel.assetSrc,
+                    ),
+                    fit: BoxFit.cover,
+                  )
+              ),
+            ),
           ),
         ),
 
