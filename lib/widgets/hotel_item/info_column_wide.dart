@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:gap/gap.dart';
 
@@ -61,29 +62,11 @@ class InfoColumnWide extends StatelessWidget {
             const Gap(3.0),
 
             //price
-            Row(
-              children: [
-                Text(
-                  '\$${hotel.price}/',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
-                  ),
-                ),
-
-                const Text(
-                  'night',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                ),
-
-              ],
+            PriceRow(
+              price: hotel.price.toString(),
+              priceFontSize: 16,
+              labelFontSize: 16,
             ),
-
-
 
           ],
         )

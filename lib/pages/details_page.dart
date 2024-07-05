@@ -3,6 +3,7 @@ import 'package:flutter_travel_v2_app/model/hotel.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
+import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:gap/gap.dart';
@@ -142,12 +143,12 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
-                    const Gap(5.0),
-
                     //stars and price row
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
 
                           //stars & reviews
@@ -158,6 +159,13 @@ class _DetailsPageState extends State<DetailsPage> {
                             textColor: null,
                             reviews: NumberFormat.compact().format(widget.hotel.reviews),
                           ),
+
+                          PriceRow(
+                            price: widget.hotel.price.toString(),
+                            textColor: null,
+                            priceFontSize: 20,
+                            labelFontSize: 16,
+                          )
                         ],
                       ),
                     ),
