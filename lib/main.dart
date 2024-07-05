@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_travel_v2_app/model/hotel.dart';
+import 'package:flutter_travel_v2_app/pages/details_page.dart';
 import 'package:flutter_travel_v2_app/pages/home_page.dart';
 import 'package:flutter_travel_v2_app/pages/discover_page.dart';
 import 'package:go_router/go_router.dart';
@@ -20,12 +22,23 @@ final GoRouter _router = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'searchPage',
-          name: 'searchPage',
+          path: 'discover',
+          name: 'discover',
           builder: (BuildContext context, GoRouterState state) {
 
             return const DiscoverPage();
           },
+          routes: <RouteBase>[
+            GoRoute(
+              path: 'details',
+              name: 'details',
+              builder: (BuildContext context, GoRouterState state) {
+                Hotel hotel = state.extra as Hotel;
+                
+                return DetailsPage(hotel: hotel);
+              }
+            )
+          ],
         ),
       ],
     ),
