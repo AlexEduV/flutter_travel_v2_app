@@ -170,6 +170,29 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+                      child: Divider(
+                        color: Colors.black12,
+                      ),
+                    ),
+
+                    //description
+
+                    //'read more' button
+
+                    //'What we offer' section title
+
+                    //'What we offer' section
+
+                    //'Hosted by' section title
+
+                    //'Hosted by' section
+
+                    //'Book now' bottom button
+
+
+
                   ],
                 ),
               )
