@@ -24,9 +24,9 @@ class LocationRow extends StatelessWidget {
 
         //location icon
         Icon(
-          FontAwesomeIcons.locationDot,
+          Icons.location_on_outlined,
           color: color,
-          size: iconSize - 3.0,
+          size: iconSize,
         ),
 
         //location text
