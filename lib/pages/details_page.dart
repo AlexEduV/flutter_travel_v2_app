@@ -11,6 +11,7 @@ import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:flutter_travel_v2_app/widgets/service_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/section_title.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
@@ -302,7 +303,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                 ],
                               ),
                               child: const Icon(
-                                Icons.message,
+                                FontAwesomeIcons.commentDots,
                                 color: Colors.white,
                               ),
                             ),
