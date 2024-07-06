@@ -17,13 +17,14 @@ class SaleBanner extends StatelessWidget {
         color: ProjectColors.dealsBannerColor,
         borderRadius: BorderRadius.circular(20.0),
         border: Border.all(
-          color: ProjectColors.accentColor
+          color: ProjectColors.dealsBannerOutlineColor,
         )
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
       child: Text(
         text,
         style: const TextStyle(
+          fontSize: 13,
           color: Colors.white,
           fontWeight: FontWeight.w500,
         ),

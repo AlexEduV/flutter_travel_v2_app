@@ -7,4 +7,5 @@ class ProjectColors {
   static const Color starColor = Color(0xfff2a50a);
 
   static const Color dealsBannerColor = Color(0xfff0856d);
+  static const Color dealsBannerOutlineColor = Color(0xffee8d66);
 }
