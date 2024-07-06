@@ -95,7 +95,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     },
                     separatorBuilder: (_, index) {
 
-                      return const Gap(20.0);
+                      return const Gap(15.0);
                     },
                   ),
                 ),
@@ -129,7 +129,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               Padding(
                 padding: const EdgeInsets.only(left: 25.0),
                 child: SizedBox(
-                  height: 300,
+                  height: 230,
                   child: ListView.separated(
                     padding: const EdgeInsets.only(right: 15.0),
                     itemCount: 3,
@@ -171,7 +171,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
 
               //'hot deals' large item
               SizedBox(
-                height: 270,
+                height: 230,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: HotelItem(

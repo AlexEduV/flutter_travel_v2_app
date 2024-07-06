@@ -35,7 +35,7 @@ class CategorySelectionItem extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(borderRadius),
         child: Container(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(borderRadius),
             border: Border.all(
@@ -63,6 +63,7 @@ class CategorySelectionItem extends StatelessWidget {
               Text(
                 text,
                 style: TextStyle(
+                  fontSize: 12,
                   color: isSelected ? activeTint : inactiveTint,
                 ),
 

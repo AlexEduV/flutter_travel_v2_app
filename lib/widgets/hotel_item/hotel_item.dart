@@ -31,7 +31,7 @@ class HotelItem extends StatelessWidget {
             onTap: onTap,
             borderRadius: BorderRadius.circular(20.0),
             child: Container(
-              width: !isLarge ? 190 : null,
+              width: !isLarge ? 170 : null,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(borderRadius),
                   image: DecorationImage(
