@@ -22,7 +22,7 @@ class PriceRow extends StatelessWidget {
           '\$$price/',
           style: TextStyle(
             color: textColor,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             fontSize: priceFontSize,
           ),
         ),
