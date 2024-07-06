@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/hotel.dart';
+import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/custom_text_button.dart';
 import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
@@ -261,24 +262,48 @@ class _DetailsPageState extends State<DetailsPage> {
                           const Gap(10.0),
 
                           //owner details
-                          Column(
-                            children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
 
-                              PrimaryText(
-                                fontSize: 16,
-                                text: widget.hotel.ownerName,
-                              ),
+                                PrimaryText(
+                                  fontSize: 16,
+                                  text: widget.hotel.ownerName,
+                                ),
 
-                              StarsRow(
-                                stars: widget.hotel.ownerStars.toString(),
-                                textColor: Colors.black87,
-                                reviews: widget.hotel.ownerReviews.toInt(),
-                              ),
+                                StarsRow(
+                                  stars: widget.hotel.ownerStars.toString(),
+                                  textColor: Colors.black87,
+                                  reviews: widget.hotel.ownerReviews.toInt(),
+                                ),
 
-                            ],
+                              ],
+                            ),
                           ),
 
-                          
+                          const Gap(10.0),
+
+                          //message button
+                          Container(
+                            height: 45,
+                            width: 45,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12.0),
+                              color: ProjectColors.accentColor,
+                              boxShadow: [
+                                BoxShadow(
+                                  offset: const Offset(2, 10.0),
+                                  blurRadius: 10.0,
+                                  color: ProjectColors.accentColor.withOpacity(0.3),
+                                ),
+                              ],
+                            ),
+                            child: const Icon(
+                              Icons.message,
+                              color: Colors.white,
+                            ),
+                          ),
 
                         ],
                       ),
