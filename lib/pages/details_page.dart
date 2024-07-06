@@ -108,7 +108,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
             //number of photos
             const Positioned(
-              top: 225.0,
+              top: 215.0,
               left: 25.0,
               right: 25.0,
               child: Center(
@@ -117,7 +117,7 @@ class _DetailsPageState extends State<DetailsPage> {
             ),
 
             Positioned(
-              top: 270,
+              top: 260,
               left: 0,
               right: 0,
               bottom: 0,
@@ -196,6 +196,9 @@ class _DetailsPageState extends State<DetailsPage> {
                           widget.hotel.description,
                           maxLines: !isDescriptionExpanded ? 3 : 10,
                           overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 13,
+                          ),
                         ),
                       ),
 

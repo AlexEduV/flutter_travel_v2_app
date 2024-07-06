@@ -25,12 +25,13 @@ class ServiceItem extends StatelessWidget {
               color: Colors.black54,
             ),
 
-            const Gap(5.0),
+            const Gap(4.0),
 
             Text(
               label,
               style: const TextStyle(
                 color: Colors.black54,
+                fontSize: 13,
               ),
 
             )
