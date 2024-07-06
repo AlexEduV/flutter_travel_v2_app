@@ -123,7 +123,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(15.0),
+              const Gap(10.0),
 
               //'popular' horizontal list view
               Padding(
@@ -167,7 +167,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(15.0),
+              const Gap(10.0),
 
               //'hot deals' large item
               SizedBox(

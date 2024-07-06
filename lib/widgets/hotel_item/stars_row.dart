@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/style/project_colors.dart';
+import 'package:intl/intl.dart';
 
 class StarsRow extends StatelessWidget {
   final String stars;
@@ -7,7 +8,7 @@ class StarsRow extends StatelessWidget {
   final double fontSize;
   final Color? textColor;
 
-  final String? reviews;
+  final int? reviews;
 
   const StarsRow({
     required this.stars,
@@ -43,10 +44,10 @@ class StarsRow extends StatelessWidget {
         Visibility(
           visible: reviews != null,
           child: Text(
-            '($reviews reviews)',
+            '(${NumberFormat.compact().format(reviews)} reviews)',
             style: TextStyle(
               fontSize: fontSize,
-              color: Colors.black54,
+              color: Colors.grey[600],
             ),
           ),
         ),

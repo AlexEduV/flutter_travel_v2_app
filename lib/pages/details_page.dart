@@ -11,7 +11,6 @@ import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/section_title.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
 
 class DetailsPage extends StatefulWidget {
   final Hotel hotel;
@@ -163,7 +162,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             fontSize: 16,
                             iconSize: 24,
                             textColor: null,
-                            reviews: NumberFormat.compact().format(widget.hotel.reviews),
+                            reviews: widget.hotel.reviews.toInt(),
                           ),
 
                           PriceRow(
@@ -217,7 +216,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
-                    const Gap(15.0),
+                    const Gap(10.0),
 
                     //'services offered' row
                     Row(
@@ -229,11 +228,61 @@ class _DetailsPageState extends State<DetailsPage> {
                         );
 
                       }),
-                    )
+                    ),
+
+                    const Gap(30.0),
 
                     //'Hosted by' section title
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 25.0),
+                      child: SectionTitle(
+                        title: 'Hosted by',
+                      ),
+                    ),
+
+                    const Gap(10.0),
 
                     //'Hosted by' section
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: Row(
+                        children: [
+
+                          //owner photo
+                          Container(
+                            height: 45,
+                            width: 45,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12.0),
+                              color: Colors.black12,
+                            ),
+                          ),
+
+                          const Gap(10.0),
+
+                          //owner details
+                          Column(
+                            children: [
+
+                              PrimaryText(
+                                fontSize: 16,
+                                text: widget.hotel.ownerName,
+                              ),
+
+                              StarsRow(
+                                stars: widget.hotel.ownerStars.toString(),
+                                textColor: Colors.black87,
+                                reviews: widget.hotel.ownerReviews.toInt(),
+                              ),
+
+                            ],
+                          ),
+
+                          
+
+                        ],
+                      ),
+                    ),
 
                     //'Book now' bottom button
 
