@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
-import 'package:flutter_travel_v2_app/widgets/grid_tile.dart';
+import 'package:flutter_travel_v2_app/widgets/custom_grid_tile.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/secondary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/splash_button.dart';
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                   StaggeredGridTile.count(
                     crossAxisCellCount: 2,
                     mainAxisCellCount: 3,
-                    child: GridTile(source: 'assets/images/get-started-4.jpg',)
+                    child: CustomGridTile(source: 'assets/images/get-started-4.jpg',)
                   ),
                   StaggeredGridTile.count(
                     crossAxisCellCount: 2,
@@ -55,27 +55,27 @@ class _HomePageState extends State<HomePage> {
                   StaggeredGridTile.count(
                     crossAxisCellCount: 2,
                     mainAxisCellCount: 3,
-                    child: GridTile(source: 'assets/images/get-started-3.jpg',)
+                    child: CustomGridTile(source: 'assets/images/get-started-3.jpg',)
                   ),
                   StaggeredGridTile.count(
                     crossAxisCellCount: 2,
                     mainAxisCellCount: 3,
-                    child: GridTile(source: 'assets/images/get-started-1.jpg',)
+                    child: CustomGridTile(source: 'assets/images/get-started-1.jpg',)
                   ),
                   StaggeredGridTile.count(
                     crossAxisCellCount: 2,
                     mainAxisCellCount: 3,
-                    child: GridTile(source: 'assets/images/get-started-5.jpg',)
+                    child: CustomGridTile(source: 'assets/images/get-started-5.jpg',)
                   ),
                   StaggeredGridTile.count(
                     crossAxisCellCount: 2,
                     mainAxisCellCount: 3,
-                    child: GridTile(source: 'assets/images/get-started-6.jpg',)
+                    child: CustomGridTile(source: 'assets/images/get-started-6.jpg',)
                   ),
                   StaggeredGridTile.count(
                       crossAxisCellCount: 2,
                       mainAxisCellCount: 2,
-                      child: GridTile(source: 'assets/images/get-started-2.jpg',)
+                      child: CustomGridTile(source: 'assets/images/get-started-2.jpg',)
                   ),
                 ],
               ),
