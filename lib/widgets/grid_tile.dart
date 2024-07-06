@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class GridTileNormal extends StatelessWidget {
+class GridTile extends StatelessWidget {
 
   final String source;
   final bool isEnlarged;
 
-  const GridTileNormal({
+  const GridTile({
     required this.source,
     this.isEnlarged = false,
     super.key,

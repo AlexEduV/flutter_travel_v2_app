@@ -6,6 +6,7 @@ import 'package:flutter_travel_v2_app/widgets/buttons/custom_text_button.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
+import 'package:flutter_travel_v2_app/widgets/section_title.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
@@ -109,9 +110,8 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
 
-                    const PrimaryText(
-                      text: 'Popular Hotels',
-                      fontSize: 24,
+                    const SectionTitle(
+                      title: 'Popular Hotels',
                     ),
 
                     CustomTextButton(
@@ -160,9 +160,8 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
                   children: [
-                    PrimaryText(
-                      text: 'Hot Deals',
-                      fontSize: 24,
+                    SectionTitle(
+                      title: 'Hot Deals',
                     ),
                   ],
                 ),

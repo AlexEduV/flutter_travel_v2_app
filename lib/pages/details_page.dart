@@ -7,6 +7,7 @@ import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
+import 'package:flutter_travel_v2_app/widgets/section_title.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -102,8 +103,8 @@ class _DetailsPageState extends State<DetailsPage> {
             //number of photos
             const Positioned(
               top: 225.0,
-              left: 10.0,
-              right: 10.0,
+              left: 25.0,
+              right: 25.0,
               child: Center(
                 child: CustomBadge(text: '124 photos',)
               ),
@@ -130,7 +131,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     //hotel name
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
                       child: PrimaryText(
                         text: widget.hotel.name,
                       ),
@@ -140,7 +141,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     //location
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
                       child: LocationRow(
                         locationName: widget.hotel.location,
                         color: Colors.black87,
@@ -149,7 +150,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     //stars and price row
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -175,7 +176,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
 
                     const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+                      padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 20.0),
                       child: Divider(
                         color: Colors.black12,
                       ),
@@ -183,7 +184,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     //description
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
                       child: Text(
                         widget.hotel.description,
                         maxLines: !isDescriptionExpanded ? 3 : 10,
@@ -193,7 +194,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
                     //'read more' button
                     Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
+                      padding: const EdgeInsets.only(left: 25.0),
                       child: CustomTextButton(
                         text: !isDescriptionExpanded ? 'Read More' : 'Read Less',
                         fontSize: null,
@@ -205,7 +206,15 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
+                    const Gap(15.0),
+
                     //'What we offer' section title
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 25.0),
+                      child: SectionTitle(
+                        title: 'What we offer',
+                      ),
+                    ),
 
                     //'What we offer' section
 
