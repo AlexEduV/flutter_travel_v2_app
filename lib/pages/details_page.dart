@@ -42,14 +42,17 @@ class _DetailsPageState extends State<DetailsPage> {
           children: [
 
             //cover image
-            Container(
-              height: 300,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    widget.hotel.assetSrc,
+            Hero(
+              tag: 'hotel-cover-${widget.hotel.id}',
+              child: Container(
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      widget.hotel.assetSrc,
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
                 ),
               ),
             ),

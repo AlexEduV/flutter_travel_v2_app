@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 
 class Hotel {
 
+  final int id;
+
   final String name;
   final String location;
   final String assetSrc;
@@ -25,6 +27,7 @@ class Hotel {
   final Map<String, IconData> services;
 
   Hotel({
+    required this.id,
     required this.name,
     required this.location,
     required this.assetSrc,

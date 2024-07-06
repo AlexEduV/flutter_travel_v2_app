@@ -8,6 +8,7 @@ class DataModel {
   static List<Hotel> hotels = [
 
     Hotel(
+      id: 1,
       name: 'Santorini',
       location: 'Greece',
       assetSrc: 'assets/images/hotel-1.jpg',
@@ -28,6 +29,7 @@ class DataModel {
     ),
 
     Hotel(
+      id: 2,
       name: 'Hotel Royal',
       location: 'Spain',
       assetSrc: 'assets/images/hotel-2.jpg',
@@ -48,6 +50,7 @@ class DataModel {
     ),
 
     Hotel(
+      id: 3,
       name: 'Anantara',
       location: 'Italy',
       assetSrc: 'assets/images/hotel-3.jpg',
@@ -68,6 +71,7 @@ class DataModel {
     ),
 
     Hotel(
+      id: 4,
       name: 'Holiday Inn Antalya',
       location: 'Turkey',
       assetSrc: 'assets/images/hotel-4.jpg',
@@ -87,8 +91,6 @@ class DataModel {
         '1 AC' : Icons.air_outlined,
       },
     ),
-
-
 
   ];
 

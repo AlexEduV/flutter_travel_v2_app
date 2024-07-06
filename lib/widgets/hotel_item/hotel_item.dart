@@ -30,16 +30,19 @@ class HotelItem extends StatelessWidget {
           child: InkWell(
             onTap: onTap,
             borderRadius: BorderRadius.circular(20.0),
-            child: Container(
-              width: !isLarge ? 170 : null,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(borderRadius),
-                  image: DecorationImage(
-                    image: AssetImage(
-                        hotel.assetSrc,
-                    ),
-                    fit: BoxFit.cover,
-                  )
+            child: Hero(
+              tag: 'hotel-cover-${hotel.id}',
+              child: Container(
+                width: !isLarge ? 170 : null,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(borderRadius),
+                    image: DecorationImage(
+                      image: AssetImage(
+                          hotel.assetSrc,
+                      ),
+                      fit: BoxFit.cover,
+                    )
+                ),
               ),
             ),
           ),
