@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class Hotel {
 
   final String name;
@@ -20,6 +22,8 @@ class Hotel {
 
   late bool isFavorite;
 
+  final Map<String, IconData> services;
+
   Hotel({
     required this.name,
     required this.location,
@@ -32,6 +36,7 @@ class Hotel {
     required this.ownerStars,
     required this.ownerReviews,
     required this.ownerAssetSrc,
+    required this.services,
     this.saleBannerText,
     this.isFavorite = false,
   });

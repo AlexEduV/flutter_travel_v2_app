@@ -6,6 +6,7 @@ import 'package:flutter_travel_v2_app/widgets/custom_badge.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
+import 'package:flutter_travel_v2_app/widgets/service_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/section_title.dart';
 import 'package:gap/gap.dart';
@@ -206,7 +207,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
-                    const Gap(15.0),
+                    const Gap(30.0),
 
                     //'What we offer' section title
                     const Padding(
@@ -216,7 +217,19 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     ),
 
-                    //'What we offer' section
+                    const Gap(15.0),
+
+                    //'services offered' row
+                    Row(
+                      children: List.generate(widget.hotel.services.length, (index) {
+
+                        return ServiceItem(
+                          label: widget.hotel.services.keys.elementAt(index),
+                          icon: widget.hotel.services.values.elementAt(index),
+                        );
+
+                      }),
+                    )
 
                     //'Hosted by' section title
 

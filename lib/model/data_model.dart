@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'hotel.dart';
 
 class DataModel {
@@ -16,6 +18,12 @@ class DataModel {
       ownerStars: 4.5,
       ownerReviews: 1079,
       ownerAssetSrc: '',
+      services: {
+        '2 Bed' : Icons.bed,
+        'Dinner' : Icons.dinner_dining,
+        'Hot Tub' : Icons.shower,
+        '1 AC' : Icons.air_outlined,
+      },
     ),
 
     Hotel(
@@ -30,6 +38,12 @@ class DataModel {
       ownerStars: 4.4,
       ownerReviews: 920,
       ownerAssetSrc: '',
+      services: {
+        '1 Bed' : Icons.bed,
+        'Dinner' : Icons.dinner_dining,
+        'Hot Tub' : Icons.shower,
+        '1 AC' : Icons.air_outlined,
+      },
     ),
 
     Hotel(
@@ -44,6 +58,12 @@ class DataModel {
       ownerStars: 4.5,
       ownerReviews: 2780,
       ownerAssetSrc: '',
+      services: {
+        '2 Bed' : Icons.bed,
+        'Dinner' : Icons.dinner_dining,
+        'Hot Tub' : Icons.shower,
+        '1 AC' : Icons.air_outlined,
+      },
     ),
 
     Hotel(
@@ -59,6 +79,12 @@ class DataModel {
       ownerReviews: 576,
       ownerAssetSrc: '',
       saleBannerText: '25% OFF',
+      services: {
+        '2 Bed' : Icons.bed,
+        'Dinner' : Icons.dinner_dining,
+        'Hot Tub' : Icons.shower,
+        '1 AC' : Icons.air_outlined,
+      },
     ),
 
 
