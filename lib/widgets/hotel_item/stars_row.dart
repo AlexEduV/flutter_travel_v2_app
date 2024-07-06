@@ -44,7 +44,7 @@ class StarsRow extends StatelessWidget {
         Visibility(
           visible: reviews != null,
           child: Text(
-            '(${NumberFormat.compact().format(reviews)} reviews)',
+            reviews != null ? '(${NumberFormat.compact().format(reviews)} reviews)' : '',
             style: TextStyle(
               fontSize: fontSize,
               color: Colors.grey[600],

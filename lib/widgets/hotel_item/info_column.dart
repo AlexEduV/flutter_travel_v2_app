@@ -5,8 +5,6 @@ import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
 import 'package:gap/gap.dart';
 
-import 'package:flutter_travel_v2_app/style/project_colors.dart';
-
 class InfoColumn extends StatelessWidget {
   final Hotel hotel;
 
