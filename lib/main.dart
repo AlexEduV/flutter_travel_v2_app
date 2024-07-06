@@ -61,6 +61,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Travel App',
       theme: ThemeData(
         useMaterial3: true,
+        fontFamily: 'SF Pro',
       ),
       debugShowCheckedModeBanner: false,
     );
