@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'hotel.dart';
 
@@ -20,8 +21,8 @@ class DataModel {
       ownerAssetSrc: '',
       services: {
         '2 Bed' : Icons.bed,
-        'Dinner' : Icons.dinner_dining,
-        'Hot Tub' : Icons.shower,
+        'Dinner' : FontAwesomeIcons.bellConcierge,
+        'Hot Tub' : FontAwesomeIcons.bath,
         '1 AC' : Icons.air_outlined,
       },
     ),
@@ -40,8 +41,8 @@ class DataModel {
       ownerAssetSrc: '',
       services: {
         '1 Bed' : Icons.bed,
-        'Dinner' : Icons.dinner_dining,
-        'Hot Tub' : Icons.shower,
+        'Dinner' : FontAwesomeIcons.bellConcierge,
+        'Hot Tub' : FontAwesomeIcons.bath,
         '1 AC' : Icons.air_outlined,
       },
     ),
@@ -60,8 +61,8 @@ class DataModel {
       ownerAssetSrc: '',
       services: {
         '2 Bed' : Icons.bed,
-        'Dinner' : Icons.dinner_dining,
-        'Hot Tub' : Icons.shower,
+        'Dinner' : FontAwesomeIcons.bellConcierge,
+        'Hot Tub' : FontAwesomeIcons.bath,
         '1 AC' : Icons.air_outlined,
       },
     ),
@@ -81,8 +82,8 @@ class DataModel {
       saleBannerText: '25% OFF',
       services: {
         '2 Bed' : Icons.bed,
-        'Dinner' : Icons.dinner_dining,
-        'Hot Tub' : Icons.shower,
+        'Dinner' : FontAwesomeIcons.bellConcierge,
+        'Hot Tub' : FontAwesomeIcons.bath,
         '1 AC' : Icons.air_outlined,
       },
     ),

@@ -7,6 +7,7 @@ import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item.dart';
 import 'package:flutter_travel_v2_app/widgets/category_selection_item.dart';
 import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/widgets/section_title.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
@@ -20,10 +21,10 @@ class DiscoverPage extends StatefulWidget {
 class _DiscoverPageState extends State<DiscoverPage> {
 
   final Map<String, IconData> sections = {
-    'Hotel' : Icons.hotel,
+    'Hotel' : FontAwesomeIcons.hotel,
     'Flight' : Icons.flight,
     'Place' : Icons.location_on,
-    'Food' : Icons.set_meal,
+    'Food' : FontAwesomeIcons.bellConcierge,
   };
 
   late int selectedSectionIndex = 0;

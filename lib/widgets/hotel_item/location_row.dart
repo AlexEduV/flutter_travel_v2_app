@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LocationRow extends StatelessWidget {
   final String locationName;
@@ -23,7 +24,7 @@ class LocationRow extends StatelessWidget {
 
         //location icon
         Icon(
-          Icons.location_on_outlined,
+          FontAwesomeIcons.locationDot,
           color: color,
           size: iconSize,
         ),
