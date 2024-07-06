@@ -166,8 +166,8 @@ class _DetailsPageState extends State<DetailsPage> {
                             //stars & reviews
                             StarsRow(
                               stars: widget.hotel.stars.toString(),
-                              fontSize: 16,
-                              iconSize: 24,
+                              fontSize: 14,
+                              iconSize: 20,
                               textColor: null,
                               reviews: widget.hotel.reviews.toInt(),
                             ),
@@ -183,7 +183,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
 
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 20.0),
+                        padding: EdgeInsets.only(left: 25.0, right: 20, top: 10, bottom: 15),
                         child: Divider(
                           color: Colors.black12,
                         ),
@@ -213,7 +213,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(30.0),
+                      const Gap(20.0),
 
                       //'What we offer' section title
                       const Padding(
@@ -237,7 +237,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         }),
                       ),
 
-                      const Gap(30.0),
+                      const Gap(20.0),
 
                       //'Hosted by' section title
                       const Padding(
@@ -315,7 +315,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(30.0),
+                      const Gap(20.0),
 
                       //'Book now' bottom button
                       SplashButton(

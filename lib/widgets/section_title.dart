@@ -14,7 +14,7 @@ class SectionTitle extends StatelessWidget {
 
     return PrimaryText(
       text: title,
-      fontSize: 24,
+      fontSize: 18,
     );
   }
 }

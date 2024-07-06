@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_v2_app/model/data_model.dart';
-import 'package:flutter_travel_v2_app/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/widgets/buttons/custom_text_button.dart';
 import 'package:flutter_travel_v2_app/widgets/hotel_item/hotel_item.dart';
@@ -53,7 +52,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                         padding: EdgeInsets.only(right: 40.0),
                         child: PrimaryText(
                           text: 'Where you wanna go?',
-                          fontSize: 32,
+                          fontSize: 26,
                           textAlign: TextAlign.start,
                           height: 1.0,
                         ),
@@ -70,11 +69,11 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(30.0),
+              const Gap(20.0),
 
               //category selection
               Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+                padding: const EdgeInsets.only(left: 25.0),
                 child: SizedBox(
                   height: 100,
                   child: ListView.separated(
@@ -102,7 +101,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(30.0),
+              const Gap(25.0),
 
               //'Popular' section title with 'See All' button
               Padding(
@@ -154,7 +153,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(30.0),
+              const Gap(25.0),
 
               //'Hot Deals' section title
               const Padding(
