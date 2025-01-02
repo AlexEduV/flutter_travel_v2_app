@@ -1,16 +1,28 @@
-# flutter_travel_v2_app
+# flutter_travel_app_v2
+
+## Summary
 
 A Flutter Mobile Travel App based on the Dribble design.
 
-## Getting Started
+## Features
+- A beautiful Custom UI based on a Dribble design
+- static data model
+- GoRouter navigation
+- Font Awesome Icons
 
-This project is a starting point for a Flutter application.
+## Architecture
 
-A few resources to get you started if this is your first Flutter project:
+- `models` - static models
+- `pages` - full pages of the app
+- `style` - colors for the project in one place
+- `widgets` - custom widget classes
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- State Management - setState
+- Data - static model with constant values
+- Navigation - GoRouter
+
+## Screenshots
+
+The Screenshots are available [here](https://www.behance.net/gallery/202616169/Flutter-Travel-App-v2)
