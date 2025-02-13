@@ -91,7 +91,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                       );
 
                     },
-                    separatorBuilder: (_, index) => const SizedBox(height: 15.0),
+                    separatorBuilder: (_, index) => const SizedBox(width: 15.0),
                   ),
                 ),
               ),
