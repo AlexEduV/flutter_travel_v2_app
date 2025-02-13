@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_travel_v2_app/presentation/style/project_colors.dart';
-import 'package:gap/gap.dart';
 
 class CategorySelectionItem extends StatelessWidget {
   final bool isSelected;
@@ -50,6 +48,7 @@ class CategorySelectionItem extends StatelessWidget {
             ] : [],
           ),
           child: Column(
+            spacing: 10.0,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
@@ -57,8 +56,6 @@ class CategorySelectionItem extends StatelessWidget {
                 icon,
                 color: isSelected ? activeTint : inactiveTint,
               ),
-
-              const Gap(10.0),
 
               Text(
                 text,

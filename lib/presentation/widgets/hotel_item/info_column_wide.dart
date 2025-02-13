@@ -3,7 +3,6 @@ import 'package:flutter_travel_v2_app/domain/entities/hotel_entity.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/stars_row.dart';
-import 'package:gap/gap.dart';
 
 class InfoColumnWide extends StatelessWidget {
   final HotelEntity hotel;
@@ -44,7 +43,7 @@ class InfoColumnWide extends StatelessWidget {
           ],
         ),
 
-        const Gap(3.0),
+        const SizedBox(height: 3.0),
 
         //location
         Row(
@@ -57,7 +56,7 @@ class InfoColumnWide extends StatelessWidget {
               iconSize: 22,
             ),
 
-            const Gap(3.0),
+            const SizedBox(width: 3.0),
 
             //price
             PriceRow(

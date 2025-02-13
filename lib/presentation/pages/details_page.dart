@@ -12,7 +12,6 @@ import 'package:flutter_travel_v2_app/presentation/widgets/service_item.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/section_title.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
 class DetailsPage extends StatefulWidget {
@@ -76,6 +75,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   ),
 
                   Row(
+                    spacing: 15.0,
                     children: [
 
                       CircledButton(
@@ -84,8 +84,6 @@ class _DetailsPageState extends State<DetailsPage> {
                         color: Colors.black54,
                         padding: 10.0,
                       ),
-
-                      const Gap(15.0),
 
                       CircledButton(
                         onTap: () {
@@ -134,7 +132,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
 
-                      const Gap(20.0),
+                      const SizedBox(height: 20.0),
 
                       //hotel name
                       Padding(
@@ -144,7 +142,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(5.0),
+                      const SizedBox(height: 5.0),
 
                       //location
                       Padding(
@@ -216,7 +214,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(20.0),
+                      const SizedBox(height: 20.0),
 
                       //'What we offer' section title
                       const Padding(
@@ -226,7 +224,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(10.0),
+                      const SizedBox(height: 10.0),
 
                       //'services offered' row
                       Row(
@@ -240,7 +238,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         }),
                       ),
 
-                      const Gap(20.0),
+                      const SizedBox(height: 20.0),
 
                       //'Hosted by' section title
                       const Padding(
@@ -250,7 +248,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(10.0),
+                      const SizedBox(height: 10.0),
 
                       //'Hosted by' section
                       Padding(
@@ -268,7 +266,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               ),
                             ),
 
-                            const Gap(10.0),
+                            const SizedBox(width: 10.0),
 
                             //owner details
                             Expanded(
@@ -291,7 +289,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               ),
                             ),
 
-                            const Gap(10.0),
+                            const SizedBox(height: 10.0),
 
                             //message button
                             Container(
@@ -318,7 +316,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
 
-                      const Gap(20.0),
+                      const SizedBox(height: 20.0),
 
                       //'Book now' bottom button
                       SplashButton(
@@ -326,8 +324,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         onTap: () {},
                       ),
 
-                      const Gap(20.0),
-
+                      const SizedBox(height: 20.0),
 
                     ],
                   ),

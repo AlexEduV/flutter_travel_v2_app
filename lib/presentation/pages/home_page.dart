@@ -5,7 +5,6 @@ import 'package:flutter_travel_v2_app/presentation/widgets/custom_grid_tile.dart
 import 'package:flutter_travel_v2_app/presentation/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/secondary_text.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/buttons/splash_button.dart';
-import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
 
@@ -81,12 +80,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            const Gap(15.0),
+            const SizedBox(height: 15.0),
 
             //slider
             DotSlider(index: index),
 
-            const Gap(25.0),
+            const SizedBox(height: 25.0),
 
             //primary text
             const Padding(
@@ -94,12 +93,12 @@ class _HomePageState extends State<HomePage> {
               child: PrimaryText(text: 'Easy way to book your hotel.'),
             ),
 
-            const Gap(10.0),
+            const SizedBox(height: 10.0),
 
             //secondary text
             const SecondaryText(text: 'Also book a flight ticket, places, food, and many more.'),
 
-            const Gap(10.0),
+            const SizedBox(height: 10.0),
 
             const Spacer(),
 
@@ -111,7 +110,7 @@ class _HomePageState extends State<HomePage> {
               },
             ),
 
-            const Gap(20.0),
+            const SizedBox(height: 20.0),
           ],
         ),
       ),

@@ -3,7 +3,6 @@ import 'package:flutter_travel_v2_app/domain/entities/hotel_entity.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/stars_row.dart';
-import 'package:gap/gap.dart';
 
 class InfoColumn extends StatelessWidget {
   final HotelEntity hotel;
@@ -17,6 +16,7 @@ class InfoColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: 3.0,
       children: [
 
         //name
@@ -29,12 +29,8 @@ class InfoColumn extends StatelessWidget {
           ),
         ),
 
-        const Gap(3.0),
-
         //location
         LocationRow(locationName: hotel.location),
-
-        const Gap(3.0),
 
         //price and stars
         Row(

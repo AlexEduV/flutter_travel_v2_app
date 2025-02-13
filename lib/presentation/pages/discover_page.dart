@@ -7,7 +7,6 @@ import 'package:flutter_travel_v2_app/presentation/widgets/category_selection_it
 import 'package:flutter_travel_v2_app/presentation/widgets/primary_text.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/section_title.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
 class DiscoverPage extends StatefulWidget {
@@ -38,7 +37,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
           child: Column(
             children: [
 
-              const Gap(30.0),
+              const SizedBox(height: 30.0),
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -69,7 +68,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(20.0),
+              const SizedBox(height: 20.0),
 
               //category selection
               Padding(
@@ -93,15 +92,12 @@ class _DiscoverPageState extends State<DiscoverPage> {
                       );
 
                     },
-                    separatorBuilder: (_, index) {
-
-                      return const Gap(15.0);
-                    },
+                    separatorBuilder: (_, index) => const SizedBox(height: 15.0),
                   ),
                 ),
               ),
 
-              const Gap(25.0),
+              const SizedBox(height: 25.0),
 
               //'Popular' section title with 'See All' button
               Padding(
@@ -123,7 +119,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(10.0),
+              const SizedBox(height: 10.0),
 
               //'popular' horizontal list view
               Padding(
@@ -144,16 +140,13 @@ class _DiscoverPageState extends State<DiscoverPage> {
                       );
 
                     },
-                    separatorBuilder: (_, index) {
-
-                      return const Gap(18.0);
-                    },
+                    separatorBuilder: (_, index) => const SizedBox(width: 18.0),
                   ),
 
                 ),
               ),
 
-              const Gap(25.0),
+              const SizedBox(height: 25.0),
 
               //'Hot Deals' section title
               const Padding(
@@ -167,7 +160,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(10.0),
+              const SizedBox(height: 10.0),
 
               //'hot deals' large item
               SizedBox(
@@ -184,7 +177,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
 
-              const Gap(25.0),
+              const SizedBox(height: 25.0),
 
             ],
           ),

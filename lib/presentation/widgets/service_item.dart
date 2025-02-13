@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class ServiceItem extends StatelessWidget {
   final String label;
@@ -18,14 +17,13 @@ class ServiceItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 4.0,
           children: [
 
             Icon(
               icon,
               color: Colors.black54,
             ),
-
-            const Gap(4.0),
 
             Text(
               label,
