@@ -12,10 +12,10 @@ A Flutter Mobile Travel App based on the Dribble design.
 
 ## Architecture
 
-- `models` - static models
-- `pages` - full pages of the app
-- `style` - colors for the project in one place
-- `widgets` - custom widget classes
+- `data` - static data model
+- `presentation` - full pages of the app, custom widgets, and styles
+- `domain` - entity models
+- `router` - Go Router configuration
 
 ## Stack
 

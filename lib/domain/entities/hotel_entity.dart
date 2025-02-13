@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class Hotel {
+class HotelEntity {
 
   final int id;
 
@@ -26,7 +26,7 @@ class Hotel {
 
   final Map<String, IconData> services;
 
-  Hotel({
+  HotelEntity({
     required this.id,
     required this.name,
     required this.location,

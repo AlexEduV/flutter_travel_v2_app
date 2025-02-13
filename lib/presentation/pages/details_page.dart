@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/models/hotel.dart';
+import 'package:flutter_travel_v2_app/domain/entities/hotel_entity.dart';
 import 'package:flutter_travel_v2_app/presentation/style/project_colors.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/buttons/custom_text_button.dart';
@@ -16,7 +16,7 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
 class DetailsPage extends StatefulWidget {
-  final Hotel hotel;
+  final HotelEntity hotel;
 
   const DetailsPage({
     required this.hotel,

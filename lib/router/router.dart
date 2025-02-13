@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_travel_v2_app/models/hotel.dart';
+import 'package:flutter_travel_v2_app/domain/entities/hotel_entity.dart';
 import 'package:flutter_travel_v2_app/presentation/pages/details_page.dart';
 import 'package:flutter_travel_v2_app/presentation/pages/discover_page.dart';
 import 'package:flutter_travel_v2_app/presentation/pages/home_page.dart';
@@ -29,7 +29,7 @@ class CustomRouterConfig {
                   path: 'details',
                   name: 'details',
                   builder: (BuildContext context, GoRouterState state) {
-                    Hotel hotel = state.extra as Hotel;
+                    HotelEntity hotel = state.extra as HotelEntity;
 
                     return DetailsPage(hotel: hotel);
                   }

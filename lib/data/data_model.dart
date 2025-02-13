@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'hotel.dart';
+import '../domain/entities/hotel_entity.dart';
 
 class DataModel {
 
-  static List<Hotel> hotels = [
+  static List<HotelEntity> hotels = [
 
-    Hotel(
+    HotelEntity(
       id: 1,
       name: 'Santorini',
       location: 'Greece',
@@ -28,7 +28,7 @@ class DataModel {
       },
     ),
 
-    Hotel(
+    HotelEntity(
       id: 2,
       name: 'Hotel Royal',
       location: 'Spain',
@@ -49,7 +49,7 @@ class DataModel {
       },
     ),
 
-    Hotel(
+    HotelEntity(
       id: 3,
       name: 'Anantara',
       location: 'Italy',
@@ -70,7 +70,7 @@ class DataModel {
       },
     ),
 
-    Hotel(
+    HotelEntity(
       id: 4,
       name: 'Holiday Inn Antalya',
       location: 'Turkey',

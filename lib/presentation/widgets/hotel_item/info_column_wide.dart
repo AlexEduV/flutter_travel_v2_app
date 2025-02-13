@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/models/hotel.dart';
+import 'package:flutter_travel_v2_app/domain/entities/hotel_entity.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/location_row.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/price_row.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/stars_row.dart';
 import 'package:gap/gap.dart';
 
 class InfoColumnWide extends StatelessWidget {
-  final Hotel hotel;
+  final HotelEntity hotel;
 
   const InfoColumnWide({
     required this.hotel,

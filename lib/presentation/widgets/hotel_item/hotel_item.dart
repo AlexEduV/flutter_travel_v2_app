@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/models/hotel.dart';
+import 'package:flutter_travel_v2_app/domain/entities/hotel_entity.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/info_column.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/info_column_wide.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/sale_banner.dart';
 
 class HotelItem extends StatelessWidget {
-  final Hotel hotel;
+  final HotelEntity hotel;
   final bool isLarge;
   final Function() onTap;
 

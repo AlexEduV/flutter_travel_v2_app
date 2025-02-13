@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/models/data_model.dart';
+import 'package:flutter_travel_v2_app/data/data_model.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/buttons/circled_button.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/buttons/custom_text_button.dart';
 import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/hotel_item.dart';
