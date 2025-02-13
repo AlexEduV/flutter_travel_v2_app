@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/style/project_colors.dart';
+import 'package:flutter_travel_v2_app/presentation/style/project_colors.dart';
 import 'package:intl/intl.dart';
 
 class StarsRow extends StatelessWidget {

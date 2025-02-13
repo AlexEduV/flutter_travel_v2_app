@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/primary_text.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;

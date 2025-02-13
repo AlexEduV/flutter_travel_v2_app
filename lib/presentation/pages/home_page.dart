@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_travel_v2_app/widgets/dot_slider.dart';
-import 'package:flutter_travel_v2_app/widgets/custom_grid_tile.dart';
-import 'package:flutter_travel_v2_app/widgets/primary_text.dart';
-import 'package:flutter_travel_v2_app/widgets/secondary_text.dart';
-import 'package:flutter_travel_v2_app/widgets/buttons/splash_button.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/dot_slider.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/custom_grid_tile.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/primary_text.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/secondary_text.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/buttons/splash_button.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 

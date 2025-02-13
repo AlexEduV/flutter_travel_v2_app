@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_v2_app/model/hotel.dart';
-import 'package:flutter_travel_v2_app/widgets/hotel_item/location_row.dart';
-import 'package:flutter_travel_v2_app/widgets/hotel_item/price_row.dart';
-import 'package:flutter_travel_v2_app/widgets/hotel_item/stars_row.dart';
+import 'package:flutter_travel_v2_app/models/hotel.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/location_row.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/price_row.dart';
+import 'package:flutter_travel_v2_app/presentation/widgets/hotel_item/stars_row.dart';
 import 'package:gap/gap.dart';
 
 class InfoColumnWide extends StatelessWidget {

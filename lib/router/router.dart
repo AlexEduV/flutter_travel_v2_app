@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_travel_v2_app/model/hotel.dart';
-import 'package:flutter_travel_v2_app/pages/details_page.dart';
-import 'package:flutter_travel_v2_app/pages/discover_page.dart';
-import 'package:flutter_travel_v2_app/pages/home_page.dart';
+import 'package:flutter_travel_v2_app/models/hotel.dart';
+import 'package:flutter_travel_v2_app/presentation/pages/details_page.dart';
+import 'package:flutter_travel_v2_app/presentation/pages/discover_page.dart';
+import 'package:flutter_travel_v2_app/presentation/pages/home_page.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomRouterConfig {
