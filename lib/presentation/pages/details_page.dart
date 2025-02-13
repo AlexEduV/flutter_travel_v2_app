@@ -34,7 +34,6 @@ class _DetailsPageState extends State<DetailsPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SizedBox(
         height: double.maxFinite,
         child: Stack(
